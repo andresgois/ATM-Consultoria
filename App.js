@@ -1,14 +1,12 @@
 import React, {Component} from "react";
-import { StatusBar, View } from "react-native"; 
-import Navbar from "./components/Navbar/Navbar";
+import CenaPrincipal from "./components/Principal/CenaPrincipal";
+
+
 
 export default class App extends Component {
   render(){
     return(
-      <View>
-        <StatusBar />
-        <Navbar />
-      </View>
+      <CenaPrincipal />
     );
   }
 }
