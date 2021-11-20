@@ -15,16 +15,19 @@ class CenaPrincipal extends Component {
  render(){
    return(
     <View>
-      <StatusBar />
-      <Navbar />
-      
+      <StatusBar 
+        hidden={false}
+        backgroundColor='#ccc'
+      />
+      <Navbar cor="#ccc" />
+
       <Image style={styles.logo} source={logo} />
 
       <View style={styles.grupoImg}>
-        <Image style={styles.menuCliente} source={menuCliente} />
-        <Image style={styles.menuContato} source={menuContato} />
-        <Image style={styles.menuEmpresa} source={menuEmpresa} />
-        <Image style={styles.menuServico} source={menuServico} />
+        <Image style={styles.menu} source={menuCliente} />
+        <Image style={styles.menu} source={menuContato} />
+        <Image style={styles.menu} source={menuEmpresa} />
+        <Image style={styles.menu} source={menuServico} />
       </View>
 
     </View>

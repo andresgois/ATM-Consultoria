@@ -15,16 +15,10 @@ export const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
   },  
-  menuCliente:{
+  menu:{
     margin: 15,
   },
-  menuContato:{
-    margin: 15,
-  },
-  menuEmpresa:{
-    margin: 15,  
-  },
-  menuServico:{
-    margin: 15,
-  },
+  statusbar: {
+    backgroundColor: '#ccc',
+  }
 });
