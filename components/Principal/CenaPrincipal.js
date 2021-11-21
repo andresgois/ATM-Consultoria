@@ -1,9 +1,6 @@
-
 import React, { Component } from 'react';
-import { Image, StatusBar, TouchableOpacity, View } from 'react-native';
-import Navbar from "../Navbar/Navbar";
+import { Alert, Image, StatusBar, TouchableOpacity, View, Text } from 'react-native';
 import { styles } from './Styles.module';
-import { useNavigationContainerRef} from '@react-navigation/native'
 
 const logo        = require('../../imgs/logo.png');
 const menuCliente = require('../../imgs/menu_cliente.png');
@@ -11,22 +8,23 @@ const menuContato = require('../../imgs/menu_contato.png');
 const menuEmpresa = require('../../imgs/menu_empresa.png');
 const menuServico = require('../../imgs/menu_servico.png');
 
-const navigationRef = useNavigationContainerRef();
 class CenaPrincipal extends Component {
 
  render(){
    return(
     <View>
       <StatusBar hidden={false} backgroundColor='#ccc' />
-      <Navbar cor="#ccc" />
 
       <Image style={styles.logo} source={logo} />
 
       <View style={styles.grupoImg}>
-        <TouchableOpacity
-          onPress={() => navigationRef.navigate('Clientes')}
+        <TouchableOpacity 
+          activeOpacity = { .5 }
+          onPress={ () => this.props.navigation.navigate('CenaClientes')}
         >
-          <Image style={styles.menu} source={menuCliente} />
+          <View>
+            <Image style={styles.menu} source={menuCliente} />
+          </View>
         </TouchableOpacity>
         <Image style={styles.menu} source={menuContato} />
         <Image style={styles.menu} source={menuEmpresa} />
