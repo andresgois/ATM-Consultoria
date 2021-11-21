@@ -8,18 +8,27 @@ const Stack = createNativeStackNavigator();
 export default class App extends Component {
   render(){
     return(
-      // <CenaPrincipal />
-      //<CenaClientes />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen 
-            name="Home"
-            component={CenaPrincipal}            
-            options={{ title: '' }}
+          <Stack.Screen name="CenaPrincipal" component={ CenaPrincipal} 
+            options={{ 
+              title: 'ATM Consultoria',
+              headerStyle: {
+                backgroundColor: '#ccc',
+              },
+              statusBarHidden: false,
+              headerTitleAlign: "center",
+            }} 
           />
-          <Stack.Screen 
-            name="Clientes"
-            component={CenaClientes}    
+          <Stack.Screen name="CenaClientes" component={ CenaClientes} 
+           options={{ 
+            title: 'ATM Consultoria',
+            headerStyle: {
+              backgroundColor: '#b9c941',
+            },
+            statusBarHidden: false,
+            headerTitleAlign: "center",
+          }} 
           />
         </Stack.Navigator>
       </NavigationContainer>
