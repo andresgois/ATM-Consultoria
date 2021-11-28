@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  container: {
+    flex:1,
+    backgroundColor: '#fff',
+  },
   logo:{
     justifyContent: 'center',
     alignItems: 'center',
@@ -17,8 +21,5 @@ export const styles = StyleSheet.create({
   },  
   menu:{
     margin: 15,
-  },
-  statusbar: {
-    backgroundColor: '#ccc',
   }
 });

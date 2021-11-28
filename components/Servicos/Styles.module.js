@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cliTexto: {
-    color:  '#b9c941',
+    color:  '#19d1c8',
     fontWeight: 'bold',
     fontSize: 28,
     margin: 10,
