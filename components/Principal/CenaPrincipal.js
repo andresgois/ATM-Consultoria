@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Alert, Image, StatusBar, TouchableOpacity, View, Text } from 'react-native';
+import { Image, StatusBar, TouchableOpacity, View,} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './Styles.module';
 
 const logo        = require('../../imgs/logo.png');
@@ -12,8 +13,8 @@ class CenaPrincipal extends Component {
 
  render(){
    return(
-    <View>
-      <StatusBar hidden={false} backgroundColor='#ccc' />
+    <SafeAreaView  style={styles.container}>
+      <StatusBar/>
 
       <Image style={styles.logo} source={logo} />
 
@@ -26,12 +27,32 @@ class CenaPrincipal extends Component {
             <Image style={styles.menu} source={menuCliente} />
           </View>
         </TouchableOpacity>
-        <Image style={styles.menu} source={menuContato} />
-        <Image style={styles.menu} source={menuEmpresa} />
-        <Image style={styles.menu} source={menuServico} />
+
+        <TouchableOpacity 
+          activeOpacity = { .5 }
+          onPress={ () => this.props.navigation.navigate('CenaContato')}
+        >
+          <View>
+            <Image style={styles.menu} source={menuContato} />
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          activeOpacity = { .5 }
+          onPress={ () => this.props.navigation.navigate('CenaEmpresa')}
+        >
+         <Image style={styles.menu} source={menuEmpresa} />
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          activeOpacity = { .5 }
+          onPress={ () => this.props.navigation.navigate('CenaServicos')}
+        >
+          <Image style={styles.menu} source={menuServico} />
+        </TouchableOpacity>
       </View>
 
-    </View>
+    </SafeAreaView >
    );
   }
  }
