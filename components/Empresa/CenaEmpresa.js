@@ -9,10 +9,6 @@ class CenaEmpresa extends Component {
  render(){
    return(
     <View  style={styles.container}>
-      <StatusBar 
-        hidden={false}
-        backgroundColor='#ec7148'
-      />
 
       <View style={styles.cliente}>
         <Image style={styles.detalheCliente} source={img} />

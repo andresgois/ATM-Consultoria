@@ -9,10 +9,7 @@ class CenaServicos extends Component {
  render(){
    return(
     <View  style={styles.container}>
-      <StatusBar 
-        hidden={false}
-        backgroundColor='#19d1c8'
-      />
+      <StatusBar backgroundColor='#19d1c8' />
 
       <View style={styles.cliente}>
         <Image style={styles.detalheCliente} source={img} />

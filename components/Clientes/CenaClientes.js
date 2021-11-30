@@ -11,8 +11,7 @@ class CenaClientes extends Component {
 
  render(){
    return(
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#b9c941" />
+    <SafeAreaView style={styles.container} >
 
       <View style={styles.cliente}>
         <Image style={styles.detalheCliente} source={detalheCliente} />

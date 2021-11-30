@@ -9,10 +9,6 @@ class CenaContato extends Component {
  render(){
    return(
     <View  style={styles.container}>
-      <StatusBar 
-        hidden={false}
-        backgroundColor='#61bd8c'
-      />
 
       <View style={styles.cliente}>
         <Image style={styles.detalheCliente} source={detalheContato} />

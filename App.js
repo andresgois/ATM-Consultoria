@@ -14,8 +14,8 @@ export default class App extends Component {
   render(){
     return(
       <SafeAreaProvider>
-        <NavigationContainer>
-        <Stack.Navigator initialRouteName="CenaPrincipal"> 
+        <NavigationContainer >
+        <Stack.Navigator initialRouteName="CenaPrincipal" screenOptions={{ headerShown: true }}> 
           <Stack.Screen name="CenaPrincipal" component={ CenaPrincipal} 
             options={{ 
               title: 'ATM Consultoria',
@@ -23,8 +23,9 @@ export default class App extends Component {
                 backgroundColor: '#ccc',
               },
               statusBarHidden: true,
+              statusBarStyle: "#ff0000",
               headerTitleAlign: "center",
-            }} 
+            }}
           />
           <Stack.Screen name="CenaClientes" component={ CenaClientes} 
           options={{ 
@@ -32,10 +33,8 @@ export default class App extends Component {
             headerStyle: {
               backgroundColor: '#b9c941',
             },
-            statusBar: {
-              backgroundColor: '#b9c941'
-            },
             statusBarHidden: false,
+            statusBarStyle: "#b9c941",
             headerTitleAlign: "center",
           }} 
           />
@@ -45,7 +44,8 @@ export default class App extends Component {
             headerStyle: {
               backgroundColor: '#61bd8c',
             },
-            statusBarHidden: true,
+            statusBarHidden: false,
+            statusBarStyle: "#61bd8c",
             headerTitleAlign: "center",
           }} 
           />
@@ -55,7 +55,8 @@ export default class App extends Component {
             headerStyle: {
               backgroundColor: '#ec7148',
             },
-            statusBarHidden: true,
+            statusBarHidden: false,
+            statusBarStyle: "#ec7148",
             headerTitleAlign: "center",
           }} 
           />
@@ -65,7 +66,8 @@ export default class App extends Component {
             headerStyle: {
               backgroundColor: '#19d1c8',
             },
-            statusBarHidden: true,
+            statusBarHidden: false,
+            statusBarStyle: "#19d1c8",
             headerTitleAlign: "center",
           }} 
           />

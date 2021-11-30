@@ -14,7 +14,7 @@ class CenaPrincipal extends Component {
  render(){
    return(
     <SafeAreaView  style={styles.container}>
-      <StatusBar/>
+      <StatusBar backgroundColor="red" hidden={false} barStyle="default"  />
 
       <Image style={styles.logo} source={logo} />
 
